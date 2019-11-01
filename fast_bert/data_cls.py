@@ -412,9 +412,9 @@ class BertDataBunch(object):
                 tokenizer=self.tokenizer,
                 #output_mode=self.output_mode,
                 # xlnet has a cls token at the end
-                cls_token_at_end=bool(self.model_type in ['xlnet']),
-                cls_token=self.tokenizer.cls_token,
-                sep_token=self.tokenizer.sep_token,
+                #cls_token_at_end=bool(self.model_type in ['xlnet']),
+                #cls_token=self.tokenizer.cls_token,
+                #sep_token=self.tokenizer.sep_token,
                 cls_token_segment_id=2 if self.model_type in ['xlnet'] else 0,
                 # pad on the left for xlnet
                 pad_on_left=bool(self.model_type in ['xlnet']),
