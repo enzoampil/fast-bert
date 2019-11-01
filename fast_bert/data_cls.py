@@ -415,11 +415,12 @@ class BertDataBunch(object):
                 #cls_token_at_end=bool(self.model_type in ['xlnet']),
                 #cls_token=self.tokenizer.cls_token,
                 #sep_token=self.tokenizer.sep_token,
-                cls_token_segment_id=2 if self.model_type in ['xlnet'] else 0,
+                #cls_token_segment_id=2 if self.model_type in ['xlnet'] else 0,
                 # pad on the left for xlnet
-                pad_on_left=bool(self.model_type in ['xlnet']),
-                pad_token_segment_id=4 if self.model_type in ['xlnet'] else 0,
-                logger=self.logger)
+                #pad_on_left=bool(self.model_type in ['xlnet']),
+                #pad_token_segment_id=4 if self.model_type in ['xlnet'] else 0,
+                #logger=self.logger
+                )
 
             # Create folder if it doesn't exist
             if self.no_cache == False or no_cache == False:
