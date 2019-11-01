@@ -410,7 +410,7 @@ class BertDataBunch(object):
                 label_list=self.labels,
                 max_seq_length=self.max_seq_length,
                 tokenizer=self.tokenizer,
-                output_mode=self.output_mode,
+                #output_mode=self.output_mode,
                 # xlnet has a cls token at the end
                 cls_token_at_end=bool(self.model_type in ['xlnet']),
                 cls_token=self.tokenizer.cls_token,
